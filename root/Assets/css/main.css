@@ -1,0 +1,444 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Roboto+Mono&family=Share+Tech+Mono&family=VT323&display=swap");
+
+:root {
+    --vt323: 'VT323', monospace;
+    --smono: 'ShareTechMono', monospace;
+    --rmono: 'Roboto Mono', monospace;
+    --cprime: 'Courier Prime', 'Courier New', monospace;
+    --Inconsolata: 'Inconsolata', monospace;
+    --green: #5bf870;
+    --green2: rgba(128,255,128,0.8);
+    --dark-green: #131;
+    --red: --rad-green: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+    --screen-line: repeating-linear-gradient( 0deg, rgba(black, 0.15), rgba(black, 0.15) 1px, transparent 1px, transparent 2px);
+    --screen-line2: repeating-linear-gradient(0deg, rgba(29, 30, 34, 0.5), rgba(29, 30, 34, 0.5) 1px, transparent 1px, transparent 2px);
+    --screen-ln3: repeating-linear-gradient(0deg, rgba(29, 30, 34, 0.5), rgba(29, 30, 34, 0.5) 1px, transparent 1px, transparent 2px);
+    --term-start: "> ";
+    --term-cursor: "█";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #000000;
+}
+
+.type {
+    word-break: break-all;
+}
+
+body {
+    background-color: #131;
+    font-family: var(--vt323);
+    /*    background-color: #131;*/
+    color: var(--green);
+    /*    margin: 0 2%;*/
+    background-position: center;
+    display: block;
+    text-transform: uppercase;
+    position: relative;
+    /*    margin: 0 auto;*/
+    /*    padding: 0 1em;*/
+}
+/* header style */
+header {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 3em;
+    padding: .25em .5em;
+    text-align: center;
+    justify-content: center;
+}
+/* page styles */
+.term-main {
+    text-transform: uppercase;
+    background-image: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+    background-position: center;
+    text-transform: uppercase;
+    display: block;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 10em 1em rgba(0, 0, 0, 0.5);
+    /* prevents scanline from forming a scrollwheel */
+    overflow: hidden;
+    padding: 0 1%;
+    animation: textShadow 4s infinite;
+}
+
+    .term-main::before {
+        content: " ";
+        display: block;
+        position: relative;
+        background: linear-gradient(rgba(18, 16, 16, 0.03) 50%, rgba(0, 0, 0, 0.45) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.22), rgba(0, 255, 0, 0.11), rgba(0, 0, 255, 0.22));
+        z-index: 2;
+        background-size: 100% 2px, 3px 100%;
+    }
+
+    .term-main::after {
+        content: " ";
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(21, 19, 19, 0.2);
+        opacity: 0;
+        z-index: 2;
+    }
+
+main {
+    border-top: 2px solid var(--green);
+    border-bottom: 2px solid var(--green);
+    height: 100%;
+    padding: 2% 1%;
+    margin: 1em 0;
+}
+
+.term-main hr {
+    color: var(--green2);
+    text-align: center;
+    width: 75%;
+    border-width: 0;
+    background-color: rgba(255,255,255,0);
+}
+
+#screen1 {
+    height: 100%;
+    background: linear-gradient( to bottom, rgba(18, 16, 16, 0.1) 50%, rgba(0, 0, 0, 0.25) 50% );
+    background-size: 100% 8px;
+    z-index: 2;
+    pointer-events: none;
+    animation: fadeIn 2s;
+}
+
+#screen2 {
+    background: var(--screen-line2);
+    background-size: 100% 2px;
+}
+
+#term-content {
+    background-color: black;
+    border: 2px solid double rgba(128,255,128,0.8);
+    display: block;
+    padding: 1%;
+    height: 70vh;
+    width: 100%;
+    overflow-y: auto;
+    text-align: left;
+    z-index: 0;
+    margin: 0 1% 0 0;
+}
+
+#scanline {
+    width: 100%;
+    height: 20px;
+    position: relative;
+    pointer-events: none;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation: scan 12s linear 0s infinite; /* You may need to change this. If the bar goes by too quickly, increase 5s. */
+    animation: scan 12s linear 0s infinite; /* Same as above */
+    background: linear-gradient(to bottom, rgba(56, 112, 82,0), rgba(56, 112, 82,0.1)) !important;
+}
+
+.term-main section {
+    float: left;
+    width: 50%;
+    padding: .25%;
+}
+
+#terminal {
+    float: right;
+    border: 2px solid var(--green);
+    height: 75vh;
+    min-width: 50vh;
+    max-width: 75vh;
+    text-wrap: normal;
+    padding: 5px;
+    margin-right: 3%;
+}
+#infopane{
+    width: 45vh;
+    
+}
+.term-main mark {
+    color: var()
+}
+
+#terminal h2 {
+    text-align: left;
+}
+
+/* nav style */
+
+/* main style */
+
+/* text styles */
+#prompt {
+    display: none;
+}
+
+[contenteditable] {
+    caret-color: transparent;
+    outline: none;
+}
+
+.type .active::after {
+    content: var(--term-cursor);
+}
+
+.typer {
+}
+
+#term-sel {
+    min-width: 12.5em;
+}
+
+.term-main h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.term-main h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.term-main summary {
+    text-align: left;
+    font-size: 1.25em;
+    
+}
+summary:hover{
+    cursor: pointer;
+}
+.term-main h3 {
+    font-size: 1em;
+}
+
+.term-main p {
+    font-size: 16px;
+    line-height: normal;
+}
+
+.term-main strong {
+    text-decoration: double;
+}
+
+.term-main a {
+    text-decoration: underline;
+    color: var(--green);
+}
+
+    .term-main a:hover {
+        background-color: var(--green);
+        color: var(--dark-green);
+    }
+
+        .term-main a:hover::before {
+            content: "> ";
+        }
+
+
+.term-main button {
+    font-family: VT323, monospace;
+    font-size: 1rem;
+    background-color: rgb(0,0,0);
+    color: var(--green);
+    border: 2px solid var(--green);
+    cursor: pointer;
+    padding: 2.5px 5px;
+}
+
+    .term-main button:hover {
+        background-color: var(--green);
+        color: var(--dark-green);
+    }
+
+    .term-main button:active {
+    }
+
+.active:after {
+    animation: cursor 1s infinite;
+    animation-timing-function: step-end;
+    margin-left: 1px;
+    line-height: 1rem;
+}
+/* input styles*/
+#input:before {
+    content: var(--term-start);
+}
+
+#input:after {
+    content: var(--term-cursor);
+    animation: blink 800ms steps(13) infinite normal;
+}
+
+#input input[type="text"] {
+    border: none;
+    /*background-color: rgba(255,255,255,0);*/
+    background-color: rgba(255,255,255,0);
+    cursor: text;
+    width: 10px;
+    z-index: 4;
+    caret-color: transparent;
+}
+
+select, option {
+    font-family: VT323, monospace;
+    font-size: 1rem;
+    background-color: rgb(0,0,0);
+    color: var(--green);
+    border: 2px solid var(--green);
+    cursor: pointer;
+    padding: 2.5px 5px;
+}
+
+/* style */
+progress {
+    color: var(--green);
+    border: none;
+}
+/* animations style */
+@-webkit-keyframes scan {
+    from {
+        transform: translateY(-10%);
+    }
+
+    to {
+        transform: translateY(5000%);
+    }
+    /* You may need to change this depending on the length of your terminal. If the scanline stops halfway, increase the second number.*/
+}
+
+@keyframes scan {
+    from {
+        transform: translateY(-10%);
+    }
+
+    to {
+        transform: translateY(5000%);
+    }
+    /* Same as above.*/
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes textShadow {
+    0% {
+        text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5), -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    5% {
+        text-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 0.5), -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    10% {
+        text-shadow: 0.02956275843481219px 0 1px rgba(0, 30, 255, 0.5), -0.02956275843481219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    15% {
+        text-shadow: 0.40218538552878136px 0 1px rgba(0, 30, 255, 0.5), -0.40218538552878136px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    20% {
+        text-shadow: 3.4794037899852017px 0 1px rgba(0, 30, 255, 0.5), -3.4794037899852017px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    25% {
+        text-shadow: 1.6125630401149584px 0 1px rgba(0, 30, 255, 0.5), -1.6125630401149584px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    30% {
+        text-shadow: 0.7015590085143956px 0 1px rgba(0, 30, 255, 0.5), -0.7015590085143956px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    35% {
+        text-shadow: 3.896914047650351px 0 1px rgba(0, 30, 255, 0.5), -3.896914047650351px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    40% {
+        text-shadow: 3.870905614848819px 0 1px rgba(0, 30, 255, 0.5), -3.870905614848819px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    45% {
+        text-shadow: 2.231056963361899px 0 1px rgba(0, 30, 255, 0.5), -2.231056963361899px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    50% {
+        text-shadow: 0.08084290417898504px 0 1px rgba(0, 30, 255, 0.5), -0.08084290417898504px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    55% {
+        text-shadow: 2.3758461067427543px 0 1px rgba(0, 30, 255, 0.5), -2.3758461067427543px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    60% {
+        text-shadow: 2.202193051050636px 0 1px rgba(0, 30, 255, 0.5), -2.202193051050636px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    65% {
+        text-shadow: 2.8638780614874975px 0 1px rgba(0, 30, 255, 0.5), -2.8638780614874975px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    70% {
+        text-shadow: 0.48874025155497314px 0 1px rgba(0, 30, 255, 0.5), -0.48874025155497314px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    75% {
+        text-shadow: 1.8948491305757957px 0 1px rgba(0, 30, 255, 0.5), -1.8948491305757957px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    80% {
+        text-shadow: 0.0833037308038857px 0 1px rgba(0, 30, 255, 0.5), -0.0833037308038857px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    85% {
+        text-shadow: 0.09769827255241735px 0 1px rgba(0, 30, 255, 0.5), -0.09769827255241735px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    90% {
+        text-shadow: 3.443339761481782px 0 1px rgba(0, 30, 255, 0.5), -3.443339761481782px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    95% {
+        text-shadow: 2.1841838852799786px 0 1px rgba(0, 30, 255, 0.5), -2.1841838852799786px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    100% {
+        text-shadow: 2.6208764473832513px 0 1px rgba(0, 30, 255, 0.5), -2.6208764473832513px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+}
+/* style */
+@media screen and (min-width: 800px) {
+}
