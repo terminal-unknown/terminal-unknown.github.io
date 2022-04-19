@@ -1,4 +1,10 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Roboto+Mono&family=Share+Tech+Mono&family=VT323&display=swap");
+
+
+﻿@font-face{
+    font-family: 'VT323', monospace;
+    src: url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Roboto+Mono&family=Share+Tech+Mono&family=VT323&display=swap");
+}
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Roboto+Mono&family=Share+Tech+Mono&family=VT323&display=swap");
 
 :root {
     --vt323: 'VT323', monospace;
@@ -9,7 +15,9 @@
     --green: #5bf870;
     --green2: rgba(128,255,128,0.8);
     --dark-green: #131;
-    --red: --rad-green: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+    --red: #ff0000;
+    --rad-green: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+    --rad-green2: radial-gradient(ellipse );
     --screen-line: repeating-linear-gradient( 0deg, rgba(black, 0.15), rgba(black, 0.15) 1px, transparent 1px, transparent 2px);
     --screen-line2: repeating-linear-gradient(0deg, rgba(29, 30, 34, 0.5), rgba(29, 30, 34, 0.5) 1px, transparent 1px, transparent 2px);
     --screen-ln3: repeating-linear-gradient(0deg, rgba(29, 30, 34, 0.5), rgba(29, 30, 34, 0.5) 1px, transparent 1px, transparent 2px);
@@ -66,7 +74,8 @@ header {
     /* prevents scanline from forming a scrollwheel */
     overflow: hidden;
     padding: 0 1%;
-    animation: textShadow 4s infinite;
+    
+    /*animation: textShadow 4s infinite;*/
 }
 
     .term-main::before {
@@ -142,7 +151,7 @@ main {
     /* Safari 4.0 - 8.0 */
     -webkit-animation: scan 12s linear 0s infinite; /* You may need to change this. If the bar goes by too quickly, increase 5s. */
     animation: scan 12s linear 0s infinite; /* Same as above */
-    background: linear-gradient(to bottom, rgba(56, 112, 82,0), rgba(56, 112, 82,0.1)) !important;
+    background: linear-gradient(to bottom, rgba(56, 112, 82,0), rgba(56, 112, 82,0.2)) !important;
 }
 
 .term-main section {
@@ -162,7 +171,7 @@ main {
     margin-right: 3%;
 }
 #infopane{
-    width: 45vh;
+    width: 60vh;
     
 }
 .term-main mark {

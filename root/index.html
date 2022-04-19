@@ -31,16 +31,17 @@
             </header>
             <hr />
             <section id="infopane">
-                <h1>--Terminal HUB--</h1>
+                <h1>Terminal HUB</h1>
                 
                 <!--<button type="button" onclick="writeCookie()">Add Cookie</button>-->
                 <details>
-                    <summary>Overview</summary>
+                    <summary>Welcome</summary>
                     <p>
-                        Welcome to the Terminal Hub. This is where you can connect to different terminals,
-                        and run custom commands.
+                        Welcome to the Terminal Hub. This is an online terminal
+                        <br>
                         * Note: terminal website is still a work in progress. Commands may not work yet. <br />
-                        <strong></strong>
+                        <br>
+                     * DO NOT ENTER ANY PERSONAL INFORMATION PLEASE.
                     </p>
                 </details>
                 <p>
@@ -53,12 +54,12 @@
                             <td><label for="selterm">Select Terminal:</label></td>
                             <td>
                                 <select name="selterm" id="selterm">
-                                    <option value="t1">Terminal #111</option>
-                                    <option value="t2">Terminal #222</option>
-                                    <option value="t3">Terminal #333</option>
-                                    <option value="t4">Terminal #444</option>
-                                    <option value="t5">Terminal #555</option>
-                                    <option value="tq">Terminal #???</option>
+                                    <option value="t1">#111</option>
+                                    <option value="t2">#222</option>
+                                    <option value="t3">#333</option>
+                                    <option value="t4">#444</option>
+                                    <option value="t5">#555</option>
+                                    <option value="tq">#???</option>
                                 </select>
                             </td>
                         </tr>
@@ -125,14 +126,17 @@
                 </details>
                 <details>
                     <summary>Other Information</summary>
-
+                    I got inspiration from serveral different sources
                     <ul>
-                        <li><a href="https://github.com/terminal-unknown/">Github: Terminal-Unknown</a></li>
+                        <li><a href="https://github.com/terminal-unknown/">Github: Terminal-Unknown (owner of this site)</a></li>
+                        <li>Sources of Inspiration</li>
+                        <li><a href="https://codesandbox.io/embed/crt-terminal-in-css-js-tlijm?fontsize=14&hidenavigation=1&theme=dark&view=preview">Terminal Sn</a></li>
+                        <li><a href="#"></a></li>
                     </ul>
                 </details>
             </section>
             <section id="terminal" class="off">
-                <h2>Terminal:<data value=""></data> </h2>
+                <h2>Terminal:<data id="info" value=""></data> </h2>
                 <hr />
                 <div class="screen2">
                     <div id="term-content">

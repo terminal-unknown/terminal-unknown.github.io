@@ -8,8 +8,11 @@
 "use strict";
 import {togglePower} from "./ui.js";
 $(document).ready(() => {
-    $("")
-    
+    $("#power").click(evt => {
+        let tnum = $("term-sel").val().trim();
+      
+    });
+
 });
 const toggleSelTerminal = function () {
     var te = document.getElementById("terminal-sel");
@@ -17,10 +20,12 @@ const toggleSelTerminal = function () {
 
 function onLoad() {
     //    const urlp = 
-};
+}
+;
 async function run(cmd, debug) {
 
-};
+}
+;
 function toggleTerminal() {
     document.getElementById('terminal-sel').innerHTML = document.getElementById('terminal-sel').value;
     document.querySelector("#terminal h2 data")[0].value = document.getElementById('terminal-sel').value;
