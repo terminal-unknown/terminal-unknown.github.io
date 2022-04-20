@@ -1,8 +1,23 @@
 {
-    "name": "terminal-xxx",
-    "version": "1.0.0",
-    "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "eVmPr",
-    "contributors": [],
-    "dependencies": {}
+  "name": "terminal-xxx",
+  "version": "1.0.0",
+  "main": "index.html",
+  "description": "Terminal Emulator",
+  "bin": {
+    "terminalScript": "util/terminal.js",
+    "os": "util/os.js",
+    "ui": "util/ui.js",
+    "": ""
+  },
+  "keywords": [],
+  "author": "Elena Miller",
+  "contributors": [],
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.7.3"
+  },
+  "devDependencies": {
+    "grunt": "^1.5.2"
+  }
 }
