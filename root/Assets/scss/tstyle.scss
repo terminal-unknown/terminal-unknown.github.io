@@ -11,21 +11,84 @@ By Elena Miller
 /* variables */
 
 :root {
-  --vt323: 'VT323', monospace;
-  --smono: 'ShareTechMono', monospace;
-  --rmono: 'Roboto Mono', monospace;
-  --cprime: 'Courier Prime', 'Courier New', monospace;
-  --Inconsolata: 'Inconsolata', monospace;
-  --green: #5bf870;
-  --green2: rgba(128,255,128,0.8);
-  --rad-green: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
-  --screen-line: repeating-linear-gradient( 0deg, rgba(black, 0.15), rgba(black, 0.15) 1px, transparent 1px, transparent 2px);
-  --term-start: ">";
-  --term-cursor: "█"; }
-
-#terminal{
-    font-family: var(--vt323)
+    --vt323: 'VT323', monospace;
+    --smono: 'ShareTechMono', monospace;
+    --rmono: 'Roboto Mono', monospace;
+    --cprime: 'Courier Prime', 'Courier New', monospace;
+    --Inconsolata: 'Inconsolata', monospace;
+    --green: #5bf870;
+    --green2: rgba(128,255,128,0.8);
+    --red: rgba(200,0,0,1);
+    --red2: rgba(255,0,0,0.8);
+    --rad-green: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+    --screen-line: repeating-linear-gradient( 0deg, rgba(black, 0.15), rgba(black, 0.15) 1px, transparent 1px, transparent 2px);
+    --term-start: ">";
+    --term-cursor: "█";
 }
-#screen1{
-    
+
+
+#monitor {
+}
+
+#crt::before {
+    content: " ";
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient( to bottom, rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50% );
+    background-size: 100% 8px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.off {
+}
+
+.on {
+}
+
+div.terminal {
+    font: 14px var(--vt323);
+    float: right;
+    display: block;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 50%;
+}
+
+.scanline {
+}
+
+#screen {
+    position: relative;
+    width: 100%;
+    b
+}
+/* animations */
+@keyframes textShadow {
+    0% {
+        text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+    }
+
+    5% {
+        text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+    }
+    /** etc */
+}
+
+@keyframes scanline {
+    0% {
+        bottom: 100%;
+    }
+
+    80% {
+        bottom: 100%;
+    }
+
+    100% {
+        bottom: 0%;
+    }
 }

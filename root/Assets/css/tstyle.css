@@ -1,29 +1,46 @@
-@charset "UTF-8";
 /*
-Terminal-XXX
-By Elena Miller
+Error: Invalid CSS after "    b": expected "{", was "}"
+        on line 69 of C:\Users\eVmPr\Documents\NetBeansProjects\terminal-xxx\root\Assets\scss\tstyle.scss
 
+64: 
+65: #screen {
+66:     position: relative;
+67:     width: 100%;
+68:     b
+69: }
+70: /* animations *\/
+71: @keyframes textShadow {
+72:     0% {
+73:         text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+74:     }
+
+Backtrace:
+C:\Users\eVmPr\Documents\NetBeansProjects\terminal-xxx\root\Assets\scss\tstyle.scss:69
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:688:in `block'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Ruby/bin/sass:23:in `load'
+C:/Ruby/bin/sass:23:in `<main>'
 */
-/*
-    Created on : Apr 20, 2022, 2:58:08 PM
-    Author     : eVmPr
-*/
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Roboto+Mono&family=Share+Tech+Mono&family=VT323&display=swap");
-/* variables */
-:root {
-  --vt323: 'VT323', monospace;
-  --smono: 'ShareTechMono', monospace;
-  --rmono: 'Roboto Mono', monospace;
-  --cprime: 'Courier Prime', 'Courier New', monospace;
-  --Inconsolata: 'Inconsolata', monospace;
-  --green: #5bf870;
-  --green2: rgba(128,255,128,0.8);
-  --rad-green: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
-  --screen-line: repeating-linear-gradient( 0deg, rgba(black, 0.15), rgba(black, 0.15) 1px, transparent 1px, transparent 2px);
-  --term-start: ">";
-  --term-cursor: "█"; }
-
-#terminal {
-  font-family: var(--vt323); }
-
-/*# sourceMappingURL=tstyle.css.map */
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    b\": expected \"{\", was \"}\"\A         on line 69 of C:\Users\eVmPr\Documents\NetBeansProjects\terminal-xxx\root\Assets\scss\tstyle.scss\A \A 64: \A 65: #screen {\A 66:     position: relative;\A 67:     width: 100%;\A 68:     b\A 69: }\A 70: /* animations */\A 71: @keyframes textShadow {\A 72:     0% {\A 73:         text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;\A 74:     }"; }
