@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <!-- xmlns="http://www.w3.org/1999/xhtml"-->
+    <head>
+        <meta charset="utf-8" />
+        <title>Terminal - Home</title>
+        <!--<meta http-equiv="refresh" content="100">-->
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+        <meta http-equiv="default-style" content="Assets/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Elena Miller">
+        <meta name="keywords" content="terminal,system, network">
+        <meta name="description" content="Personal Website">
+        <link rel="icon" href="Assets/image/favicon.ico" sizes="16x16" />
+        <link rel="stylesheet" href="Assets/css/main.css" type="text/css" />
+        <link rel="stylesheet" href="Assets/css/all.css" type="text/css" />
+        <link rel="stylesheet" href="Assets/css/form.css" type="text/css" />
+        <link rel="stylesheet" href="Assets/css/tstyle.css" type="text/css" />
+        <link rel="stylesheet" type="image/x-icon" href="Assets/scss/terminal.scss" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/f1903f98ac.js" crossorigin="anonymous"></script>
+        <script src="Assets/js/cookies.js"></script>
+
+    </head>
+    <body>
+        <main class="term-main">
+            <div id="scanline"></div>
+            <!--<div id="screen1">-->
+            <header>
+                <!--<i class="fas fa-terminal"></i>-->
+                >_ONLINE TERMINAL NETWORK█
+            </header>
+            <hr />
+            <section id="infopane">
+                <h1>Terminal HUB</h1>
+
+                <!--<button type="button" onclick="writeCookie()">Add Cookie</button>-->
+                <details>
+                    <summary>Welcome</summary>
+                    <p>
+                        Welcome to the Terminal Hub. This is an online terminal
+                        <br>
+                        * Note: terminal website is still a work in progress. Commands may not work yet. <br />
+                        <br>
+                        * DO NOT ENTER ANY PERSONAL INFORMATION PLEASE.
+                        <br /> Terminal Connection: Select a Terminal before Clicking &QUOT;CONNECT&QUOT;
+                    </p>
+                </details>
+                <p>
+
+                </p>
+                <details>
+                    <summary>Terminal Connection</summary>
+                    <table id="connector">
+                        <tr>
+                            <td><label for="selterm">Select Terminal:</label></td>
+                            <td>
+                                <select name="selterm" id="selterm">
+                                    <option value="111">#111</option>
+                                    <option value="222">#222</option>
+                                    <option value="333">#333</option>
+                                    <option value="444">#444</option>
+                                    <option value="555">#555</option>
+                                    <option value="???">#???</option>
+                                </select>
+                            </td>
+                            <td><button type="button" id="power" title="Connect to Selected Terminal">Connect</button></td>
+                        </tr>
+                        <tr>
+                            <!--<td><span id="terminal-sel"></span></td>-->
+                            <td><label for="theme">Select Theme (optional):</label></td>
+                            <td><select name="theme" id="theme">
+                                    <option value="">Theme</option>
+                                    <option value="">Theme</option>
+                                    <option value="">Theme</option>
+                                </select></td>
+                        </tr>
+                    </table>
+                </details>
+
+
+                <details>
+                    <summary>Terminals - Information</summary>
+                    Each Terminal Contains a set of commands that you can try out.
+
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt>Terminal #111</dt>
+                                <dd>
+                                    - Location: online <br />
+                                    - Connection:
+                                    - Commands:
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>Terminal #222</dt>
+                                <dd>
+                                    - Location: online <br />
+                                    - Connection:
+                                    - Commands:
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>Terminal #333</dt>
+                                <dd>
+                                    - Location: online <br />
+                                    - Connection:
+                                    - Commands:
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>Terminal #444</dt>
+                                <dd>
+                                    - Location: online <br />
+                                    - Connection:
+                                    - Commands:
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>Terminal #555</dt>
+                                <dd>
+                                    - Location: online <br />
+                                    - Connection:
+                                    - Commands:
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>Terminal #???</dt>
+                                <dd>
+                                    - Location: online <br />
+                                    - Connection: ?????
+                                    - Commands: ?????,?????
+
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt></dt>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Other Information</summary>
+                    I got inspiration from serveral different sources
+                    <ul>
+                        <li><a href="https://github.com/terminal-unknown/">Github: Terminal-Unknown (owner of this site)</a></li>
+                        <li>Sources of Inspiration</li>
+                        <li><a href="https://codesandbox.io/embed/crt-terminal-in-css-js-tlijm?fontsize=14&hidenavigation=1&theme=dark&view=preview">Terminal Sn</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </details>
+            </section>
+            <section id="terminal" class="off">
+                <table id="info"><tr>
+                        <td>Terminal:</td>
+                        <td><data id="term" value=""></data></td>
+                        <td></td>
+                    </tr>
+                    <tr><td>Connection State: </td>
+                        <td><data id="connect" value="-1">Not Connected</data></td></tr>
+                </table>
+                
+                <hr />
+                <div class="screen2">
+                    <div id="term-content">
+                        <div id="input"><input name="t-in" id="t-in" ></div> <span></span>
+                    </div>
+                </div>
+            </section>
+            <!--</div>-->
+        </main>
+
+        <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>-->
+        <!--<script src="Assets/utils/terminal.js"></script>-->
+        <script src="Assets/util/terminal.js"></script>
+        <!--<script  src="..//src/terminal.js" type="module"></script>-->
+    </body>
+</html>

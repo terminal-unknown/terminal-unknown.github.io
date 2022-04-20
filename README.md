@@ -1,4 +1,5 @@
 #
 # terminal-unknown.gihub.io
-## Link: https://terminal-unknown.github.io/root/index.html
-
+## Links:
+### - Home: https://terminal-unknown.github.io/root/index.html
+### - Terminal2: https://terminal-unknown.github.io/root/terminal.html

@@ -1,0 +1,31 @@
+/*
+Terminal-XXX
+By Elena Miller
+
+*/
+/*
+    Created on : Apr 20, 2022, 2:58:08 PM
+    Author     : eVmPr
+*/
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Roboto+Mono&family=Share+Tech+Mono&family=VT323&display=swap");
+/* variables */
+
+:root {
+  --vt323: 'VT323', monospace;
+  --smono: 'ShareTechMono', monospace;
+  --rmono: 'Roboto Mono', monospace;
+  --cprime: 'Courier Prime', 'Courier New', monospace;
+  --Inconsolata: 'Inconsolata', monospace;
+  --green: #5bf870;
+  --green2: rgba(128,255,128,0.8);
+  --rad-green: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+  --screen-line: repeating-linear-gradient( 0deg, rgba(black, 0.15), rgba(black, 0.15) 1px, transparent 1px, transparent 2px);
+  --term-start: ">";
+  --term-cursor: "█"; }
+
+#terminal{
+    font-family: var(--vt323)
+}
+#screen1{
+    
+}

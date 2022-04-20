@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Apr 19, 2022, 5:48:12 PM
+    Author     : eVmPr
+*/
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Roboto+Mono&family=Share+Tech+Mono&family=VT323&display=swap");
+:root{
+    --vt323: 'VT323', monospace;
+    --smono: 'ShareTechMono', monospace;
+    --rmono: 'Roboto Mono', monospace;
+}
+form{
+
+}
+input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-family: var(--vt323);
+    color: #3F3;
+    caret-color: transparent;
+}
+#term-content input{
+    width: 1vh;
+}

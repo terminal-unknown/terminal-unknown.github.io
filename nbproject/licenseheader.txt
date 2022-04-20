@@ -1,0 +1,9 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Terminal-XXX
+${licensePrefix}By Elena Miller
+${licensePrefix}
+<#if licenseLast??>
+${licenseLast}
+</#if>
