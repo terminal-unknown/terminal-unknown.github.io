@@ -1,23 +1,29 @@
 {
-  "name": "terminal-xxx",
-  "version": "1.0.0",
-  "main": "index.html",
-  "description": "Terminal Emulator",
-  "bin": {
-    "terminalScript": "util/terminal.js",
-    "os": "util/os.js",
-    "ui": "util/ui.js",
-    "": ""
-  },
-  "keywords": [],
-  "author": "Elena Miller",
-  "contributors": [],
-  "dependencies": {
-    "jquery": "^3.6.0",
-    "mysql": "^2.18.1",
-    "nodemailer": "^6.7.3"
-  },
-  "devDependencies": {
-    "grunt": "^1.5.2"
-  }
+    "name": "terminal-xxx",
+    "version": "1.0.0",
+    "main": "index.html",
+    "description": "Terminal Emulator",
+    "bin": {
+        "terminalScript": "util/terminal.js",
+        "os": "util/os.js",
+        "ui": "util/ui.js",
+        "": ""
+    },
+   
+    "keywords": [],
+    "author": "Elena Miller",
+    "contributors": [],
+    "devDependencies": {
+        "grunt": "^1.5.2",
+        "grunt-contrib-concat": "^2.1.0",
+        "grunt-contrib-jshint": "^3.2.0",
+        "grunt-contrib-uglify": "^5.2.1",
+        "grunt-contrib-watch": "^1.1.0"
+    },
+    "dependencies": {
+        "fund": "^1.0.0",
+        "jquery": "^3.6.0",
+        "mysql": "^2.18.1",
+        "nodemailer": "^6.7.3"
+    }
 }

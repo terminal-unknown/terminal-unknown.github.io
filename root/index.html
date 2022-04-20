@@ -20,7 +20,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/f1903f98ac.js" crossorigin="anonymous"></script>
         <script src="Assets/js/cookies.js"></script>
-        
+
     </head>
     <body>
         <main class="term-main">
@@ -33,7 +33,7 @@
             <hr />
             <section id="infopane">
                 <h1>Terminal HUB</h1>
-                
+
                 <!--<button type="button" onclick="writeCookie()">Add Cookie</button>-->
                 <details>
                     <summary>Welcome</summary>
@@ -42,8 +42,8 @@
                         <br>
                         * Note: terminal website is still a work in progress. Commands may not work yet. <br />
                         <br>
-                     * DO NOT ENTER ANY PERSONAL INFORMATION PLEASE.
-                     <br /> Terminal Connection: Select a Terminal before Clicking &QUOT;CONNECT&QUOT;
+                        * DO NOT ENTER ANY PERSONAL INFORMATION PLEASE.
+                        <br /> Terminal Connection: Select a Terminal before Clicking &QUOT;CONNECT&QUOT;
                     </p>
                 </details>
                 <p>
@@ -68,8 +68,10 @@
                         </tr>
                         <tr>
                             <!--<td><span id="terminal-sel"></span></td>-->
-                            <td><label for="theme"></label></td>
+                            <td><label for="theme">Select Theme (optional):</label></td>
                             <td><select name="theme" id="theme">
+                                    <option value="">Theme</option>
+                                    <option value="">Theme</option>
                                     <option value="">Theme</option>
                                 </select></td>
                         </tr>
@@ -94,7 +96,7 @@
                         </li>
                         <li>
                             <dl>
-                                <dt>Terminal #111</dt>
+                                <dt>Terminal #222</dt>
                                 <dd>
                                     - Location: online <br />
                                     - Connection:
@@ -104,7 +106,7 @@
                         </li>
                         <li>
                             <dl>
-                                <dt>Terminal #111</dt>
+                                <dt>Terminal #333</dt>
                                 <dd>
                                     - Location: online <br />
                                     - Connection:
@@ -114,11 +116,32 @@
                         </li>
                         <li>
                             <dl>
-                                <dt>Terminal #111</dt>
+                                <dt>Terminal #444</dt>
                                 <dd>
                                     - Location: online <br />
                                     - Connection:
                                     - Commands:
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>Terminal #555</dt>
+                                <dd>
+                                    - Location: online <br />
+                                    - Connection:
+                                    - Commands:
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>Terminal #???</dt>
+                                <dd>
+                                    - Location: online <br />
+                                    - Connection: ?????
+                                    - Commands: ?????,?????
+
                                 </dd>
                             </dl>
                         </li>
@@ -142,7 +165,15 @@
                 </details>
             </section>
             <section id="terminal" class="off">
-                <h2>Terminal:<data id="info" value=""></data> </h2>
+                <table id="info"><tr>
+                        <td>Terminal:</td>
+                        <td><data id="term" value=""></data></td>
+                        <td></td>
+                    </tr>
+                    <tr><td>Connection State: </td>
+                        <td><data id="connect" value="-1">Not Connected</data></td></tr>
+                </table>
+                
                 <hr />
                 <div class="screen2">
                     <div id="term-content">
@@ -152,9 +183,10 @@
             </section>
             <!--</div>-->
         </main>
-        
+
         <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>-->
         <!--<script src="Assets/utils/terminal.js"></script>-->
-        <script src="/util/terminal.js"></script>
+        <script src="Assets/util/terminal.js"></script>
+        <!--<script  src="..//src/terminal.js" type="module"></script>-->
     </body>
 </html>

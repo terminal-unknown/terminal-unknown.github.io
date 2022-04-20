@@ -52,6 +52,7 @@ body {
     /*    margin: 0 auto;*/
     /*    padding: 0 1em;*/
 }
+#connect{float: right;}
 /* header style */
 header {
     width: 100%;
@@ -108,13 +109,22 @@ main {
     padding: 2% 1%;
     margin: 1em 0;
 }
-
+.off #term-content{
+    display: none;
+}
+.on #term-content{
+    display: block;
+}
+#terminal #info td{
+    text-align: right;
+}
 .term-main hr {
     color: var(--green2);
     text-align: center;
     width: 75%;
     border-width: 0;
     background-color: rgba(255,255,255,0);
+    margin: 5px 0;
 }
 
 #screen1 {
@@ -159,7 +169,7 @@ main {
 
 .term-main section {
     float: left;
-    width: 50%;
+    width: 45%;
     padding: .25%;
 }
 
@@ -170,7 +180,7 @@ main {
     width: 50%;   
     text-wrap: normal;
     padding: 5px;
-    margin-right: 3%;
+    margin-right: 1%;
 }
 #infopane{
     width: 60vh;
@@ -306,7 +316,7 @@ select, option {
     color: var(--green);
     border: 2px solid var(--green);
     cursor: pointer;
-    padding: 2.5px 5px;
+    /*padding: 2.5px 5px;*/
 }
 
 /* style */
