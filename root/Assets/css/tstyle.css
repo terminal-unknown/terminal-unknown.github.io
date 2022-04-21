@@ -1,46 +1,233 @@
+@charset "UTF-8";
 /*
-Error: Invalid CSS after "    b": expected "{", was "}"
-        on line 69 of C:\Users\eVmPr\Documents\NetBeansProjects\terminal-xxx\root\Assets\scss\tstyle.scss
+Terminal-XXX
+By Elena Miller
 
-64: 
-65: #screen {
-66:     position: relative;
-67:     width: 100%;
-68:     b
-69: }
-70: /* animations *\/
-71: @keyframes textShadow {
-72:     0% {
-73:         text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-74:     }
-
-Backtrace:
-C:\Users\eVmPr\Documents\NetBeansProjects\terminal-xxx\root\Assets\scss\tstyle.scss:69
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:688:in `block'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-C:/Ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
-C:/Ruby/bin/sass:23:in `load'
-C:/Ruby/bin/sass:23:in `<main>'
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"    b\": expected \"{\", was \"}\"\A         on line 69 of C:\Users\eVmPr\Documents\NetBeansProjects\terminal-xxx\root\Assets\scss\tstyle.scss\A \A 64: \A 65: #screen {\A 66:     position: relative;\A 67:     width: 100%;\A 68:     b\A 69: }\A 70: /* animations */\A 71: @keyframes textShadow {\A 72:     0% {\A 73:         text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;\A 74:     }"; }
+/*
+    Created on : Apr 20, 2022, 2:58:08 PM
+    Author     : eVmPr
+*/
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Roboto+Mono&family=Share+Tech+Mono&family=VT323&display=swap");
+/* variables */
+:root {
+  --vt323: 'VT323', monospace;
+  --smono: 'ShareTechMono', monospace;
+  --rmono: 'Roboto Mono', monospace;
+  --cprime: 'Courier Prime', 'Courier New', monospace;
+  --Inconsolata: 'Inconsolata', monospace;
+  --green: #5bf870;
+  --green2: rgba(128,255,128,0.8);
+  --red: rgba(200,0,0,1);
+  --red2: rgba(255,0,0,0.8);
+  --rad-green: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+  --screen-line: repeating-linear-gradient( 0deg, rgba(black, 0.15), rgba(black, 0.15) 1px, transparent 1px, transparent 2px);
+  --term-start: ">";
+  --term-cursor: "█"; }
+
+#monitor {
+  border: 1em solid #646464;
+  border-radius: 1em;
+  float: left;
+  width: 50%;
+  height: 65vh;
+  margin: 1.5%;
+  overflow: hidden;
+  background: black; }
+
+#crt {
+  width: 100%;
+  height: 100%;
+  animation: textShadow 1.6s infinite; }
+
+#crt::before {
+  content: " ";
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 8px, 8px 100%;
+  z-index: 2;
+  pointer-events: none; }
+
+#crt::after {
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  animation: flicker 0.15s infinite; }
+
+.off {
+  display: none; }
+
+.on {
+  display: block; }
+
+.theme-green {
+  color: var(--green);
+  background-color: var(--rad-green); }
+
+#screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  bottom: 100%;
+  animation: scanline 10s linear infinite;
+  overflow: hidden; }
+
+div.terminal {
+  font-family: "VT323", monospace;
+  text-transform: uppercase;
+  float: right;
+  display: block;
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow-y: auto; }
+
+.scanline {
+  width: 100%;
+  height: 100px;
+  z-index: 8;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.2) 10%, rgba(0, 0, 0, 0.1) 100%);
+  opacity: 0.1;
+  position: absolute;
+  bottom: 100%;
+  animation: scanline 10s linear infinite; }
+
+#input {
+  position: relative;
+  caret-color: transparent; }
+
+#input[contenteditable="true"]:after {
+  content: var(--term-cursor);
+  animation: cursor 1s infinite;
+  animation-timing-function: step-end;
+  margin-left: 1px; }
+
+#input:before {
+  content: ">";
+  position: absolute;
+  padding-left: 1.5rem;
+  left: 0; }
+
+/* animations */
+/*@keyframes textShadow {
+    0% {
+        text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+    }
+
+    5% {
+        text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+    }
+    * etc 
+}*/
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.4389924193px 0 1px rgba(0, 30, 255, 0.5), -0.4389924193px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  5% {
+    text-shadow: 2.7928974011px 0 1px rgba(0, 30, 255, 0.5), -2.7928974011px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  10% {
+    text-shadow: 0.0295627584px 0 1px rgba(0, 30, 255, 0.5), -0.0295627584px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  15% {
+    text-shadow: 0.4021853855px 0 1px rgba(0, 30, 255, 0.5), -0.4021853855px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  20% {
+    text-shadow: 3.47940379px 0 1px rgba(0, 30, 255, 0.5), -3.47940379px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  25% {
+    text-shadow: 1.6125630401px 0 1px rgba(0, 30, 255, 0.5), -1.6125630401px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  30% {
+    text-shadow: 0.7015590085px 0 1px rgba(0, 30, 255, 0.5), -0.7015590085px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  35% {
+    text-shadow: 3.8969140477px 0 1px rgba(0, 30, 255, 0.5), -3.8969140477px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  40% {
+    text-shadow: 3.8709056148px 0 1px rgba(0, 30, 255, 0.5), -3.8709056148px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  45% {
+    text-shadow: 2.2310569634px 0 1px rgba(0, 30, 255, 0.5), -2.2310569634px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  50% {
+    text-shadow: 0.0808429042px 0 1px rgba(0, 30, 255, 0.5), -0.0808429042px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  55% {
+    text-shadow: 2.3758461067px 0 1px rgba(0, 30, 255, 0.5), -2.3758461067px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  60% {
+    text-shadow: 2.2021930511px 0 1px rgba(0, 30, 255, 0.5), -2.2021930511px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  65% {
+    text-shadow: 2.8638780615px 0 1px rgba(0, 30, 255, 0.5), -2.8638780615px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  70% {
+    text-shadow: 0.4887402516px 0 1px rgba(0, 30, 255, 0.5), -0.4887402516px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  75% {
+    text-shadow: 1.8948491306px 0 1px rgba(0, 30, 255, 0.5), -1.8948491306px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  80% {
+    text-shadow: 0.0833037308px 0 1px rgba(0, 30, 255, 0.5), -0.0833037308px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  85% {
+    text-shadow: 0.0976982726px 0 1px rgba(0, 30, 255, 0.5), -0.0976982726px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  90% {
+    text-shadow: 3.4433397615px 0 1px rgba(0, 30, 255, 0.5), -3.4433397615px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  95% {
+    text-shadow: 2.1841838853px 0 1px rgba(0, 30, 255, 0.5), -2.1841838853px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  100% {
+    text-shadow: 2.6208764474px 0 1px rgba(0, 30, 255, 0.5), -2.6208764474px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; } }
+@keyframes scan {
+  from {
+    transform: translateY(-10%); }
+  to {
+    transform: translateY(5000%); } }
+@keyframes scanline {
+  0% {
+    bottom: 100%; }
+  80% {
+    bottom: 100%; }
+  100% {
+    bottom: 0%; } }
+@keyframes flicker {
+  0% {
+    opacity: 0.27861; }
+  5% {
+    opacity: 0.34769; }
+  10% {
+    opacity: 0.23604; }
+  15% {
+    opacity: 0.90626; }
+  20% {
+    opacity: 0.18128; }
+  25% {
+    opacity: 0.83891; }
+  30% {
+    opacity: 0.65583; }
+  35% {
+    opacity: 0.67807; }
+  40% {
+    opacity: 0.26559; }
+  45% {
+    opacity: 0.84693; }
+  50% {
+    opacity: 0.96019; }
+  55% {
+    opacity: 0.08594; }
+  60% {
+    opacity: 0.20313; }
+  65% {
+    opacity: 0.71988; }
+  70% {
+    opacity: 0.53455; }
+  75% {
+    opacity: 0.37288; }
+  80% {
+    opacity: 0.71428; }
+  85% {
+    opacity: 0.70419; }
+  90% {
+    opacity: 0.7003; }
+  95% {
+    opacity: 0.36108; }
+  100% {
+    opacity: 0.24387; } }
+
+/*# sourceMappingURL=tstyle.css.map */

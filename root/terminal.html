@@ -21,16 +21,27 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/f1903f98ac.js" crossorigin="anonymous"></script>
         <script src="Assets/js/cookies.js"></script>
+        <script src="https://unpkg.com/typeit@8.4.0/dist/index.umd.js" type="module"></script>
     </head>
     <body>
         <main class="term-main">
-            <div id="scanline"></div>
+<!--            <div id="scanline"></div>-->
             <!--<div id="screen1">-->
             <header>
                 <!--<i class="fas fa-terminal"></i>-->
                 >_ONLINE TERMINAL NETWORK█
             </header>
             <hr />
+            <div id="monitor">
+                <div id="crt" class="theme-green off" >
+                    <div class="scanline"></div>
+                    <div class="terminal">
+<!--                    <div id="input"><input name="t-in" id="t-in" ></div> <span></span>-->
+                </div>
+                </div>
+                
+            </div>
+            
             <section id="infopane">
                 <h1>Terminal HUB</h1>
 
@@ -70,20 +81,20 @@
                             <!--<td><span id="terminal-sel"></span></td>-->
                             <td><label for="theme">Select Theme (optional):</label></td>
                             <td><select name="theme" id="theme">
-                                    <option value="">Theme</option>
-                                    <option value="">Theme</option>
-                                    <option value="">Theme</option>
+                                    <option value="theme-green">Theme</option>
+                                    <option value="theme-blue">Theme</option>
+                                    <option value="theme-">Theme</option>
                                 </select></td>
                         </tr>
                     </table>
                     <table id="info"><tr>
-                        <td>Terminal:</td>
-                        <td><data id="term" value=""></data></td>
-                        <td></td>
-                    </tr>
-                    <tr><td>Connection State: </td>
-                        <td><data id="connect" value="-1">Not Connected</data></td></tr>
-                </table>
+                            <td>Terminal:</td>
+                            <td><data id="term" value="111">111</data></td>
+                            <td></td>
+                        </tr>
+                        <tr><td>Connection State: </td>
+                            <td><data id="connect" value="-1">Not Connected</data></td></tr>
+                    </table>
                 </details>
 
 
@@ -169,25 +180,24 @@
                         <li>Sources of Inspiration</li>
                         <li><a href="https://codesandbox.io/embed/crt-terminal-in-css-js-tlijm?fontsize=14&hidenavigation=1&theme=dark&view=preview">Terminal Sn</a></li>
                         <li><a href="#"></a></li>
+                        <li>Credit to Other Sources<ul>
+                                <li><a href="https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh">Retro CRT Terminal Screen + JS - Dev Community</a></li>
+                                <li></li>
+                            </ul></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
                     </ul>
                 </details>
             </section>
-            <div class="terminal" class="off">
-                
-                
-                <hr />
-                <div class="monitor">
-                    <div id="content">
-                        <div id="input"><input name="t-in" id="t-in" ></div> <span></span>
-                    </div>
-                </div>
-            </div>
+
             <!--</div>-->
         </main>
 
         <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>-->
         <!--<script src="Assets/utils/terminal.js"></script>-->
-        <script src="Assets/util/terminal.js"></script>
+        <!--<script src="Assets/util/terminal.js"></script>-->
+        <script src="Assets/js/terminal.js"></script>
         <!--<script  src="..//src/terminal.js" type="module"></script>-->
     </body>
 </html>

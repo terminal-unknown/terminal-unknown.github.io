@@ -3,11 +3,19 @@
  * By Elena Miller
  * 
  */
+import TypeIt from 'typeit';
+import {pause} from './os.js';
+const x = ()=>{};
 /**
- * 
- * @param {type} text
+ * outputs text to container
+ * @param {String} text
+ * @param {element} container
  * @returns {undefined}
  */
-function output(text){
-    
+async function output(text, container=$(".terminal")){
+    return new Promise(resolve =>{
+        let terminal = document.querySelector(".terminal");
+        
+    });
 }
+export default output;

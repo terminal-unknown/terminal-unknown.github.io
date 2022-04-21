@@ -1,9 +1,10 @@
 
 
-﻿@font-face{
+﻿@font-face {
     font-family: 'VT323', monospace;
     src: url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Roboto+Mono&family=Share+Tech+Mono&family=VT323&display=swap");
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Roboto+Mono&family=Share+Tech+Mono&family=VT323&display=swap");
 
 :root {
@@ -48,17 +49,20 @@ body {
     display: block;
     text-transform: uppercase;
     position: relative;
-    width: 100%;
+    width: 150vh;
     /*    margin: 0 auto;*/
     /*    padding: 0 1em;*/
 }
-#connect{float: right;}
+
+#connect {
+    float: right;
+}
 /* header style */
 header {
     width: 100%;
     margin-bottom: 15px;
     font-size: 3em;
-    padding: .25em .5em;
+    padding: 1% 2.5%;
     text-align: center;
     justify-content: center;
 }
@@ -76,7 +80,6 @@ header {
     /* prevents scanline from forming a scrollwheel */
     overflow: hidden;
     padding: 0 1%;
-    
     /*animation: textShadow 4s infinite;*/
 }
 
@@ -109,15 +112,19 @@ main {
     padding: 2% 1%;
     margin: 1em 0;
 }
-.off #term-content{
+
+.off #term-content {
     display: none;
 }
-.on #term-content{
+
+.on #term-content {
     display: block;
 }
-#terminal #info td{
+
+#terminal #info td {
     text-align: right;
 }
+
 .term-main hr {
     color: var(--green2);
     text-align: center;
@@ -145,14 +152,13 @@ main {
 #term-content {
     background-color: black;
     border: 2px solid double rgba(128,255,128,0.8);
-   position: relative;
+    position: relative;
     display: block;
     padding: 1%;
     height: 70vh;
     width: 100%;
     overflow-y: auto;
     text-align: left;
-    
     /*margin: 0 1% 0 0;*/
 }
 
@@ -177,21 +183,23 @@ main {
     float: right;
     border: 2px solid var(--green);
     height: 75vh;
-    width: 50%;   
+    width: 50%;
     text-wrap: normal;
     padding: 5px;
     margin-right: 1%;
 }
-#infopane{
+
+#infopane {
     width: 60vh;
-    
 }
+
 .term-main mark {
     color: var()
 }
 
-#terminal h2 {
-    text-align: left;
+.term-main details {
+    max-height: 25vh;
+    overflow-y: auto;
 }
 
 /* nav style */
@@ -232,11 +240,12 @@ main {
 .term-main summary {
     text-align: left;
     font-size: 1.25em;
-    
 }
-summary:hover{
+
+summary:hover {
     cursor: pointer;
 }
+
 .term-main h3 {
     font-size: 1em;
 }
@@ -290,7 +299,7 @@ summary:hover{
     line-height: 1rem;
 }
 /* input styles*/
-#input:before {
+/*#input:before {
     content: var(--term-start);
 }
 
@@ -301,13 +310,13 @@ summary:hover{
 
 #input input[type="text"] {
     border: none;
-    /*background-color: rgba(255,255,255,0);*/
+    background-color: rgba(255,255,255,0);
     background-color: rgba(255,255,255,0);
     cursor: text;
     width: 10px;
     z-index: 4;
     caret-color: transparent;
-}
+}*/
 
 select, option {
     font-family: VT323, monospace;

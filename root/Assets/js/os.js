@@ -4,22 +4,14 @@
  * 
  */
 
-
-/* 
- * Terminal-XXX
- * By Elena Miller
- * 
- */
-
 //import TypeIt from "typeit";
-import TypeIt from "typeit";
-import "./ui.js";
+import TypeIt from "https://unpkg.com/typeit@8.4.0/dist/index.umd.js";
 const main = ()=>{
     
 };
 async function boot(){
     clear(); 
-    await ("Hello World");
+    await typer("Hello World");
 }
 
 function pause(s = 1) {
@@ -43,5 +35,5 @@ function input(value) {
         terminal.appendChild(input);
         input.focus();
     });};
-export {boot,input,pause};
+export {boot, input,pause};
 export default main;
