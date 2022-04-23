@@ -18,14 +18,14 @@
         <link rel="stylesheet" href="Assets/css/form.css" type="text/css" />
         <link rel="stylesheet" href="Assets/css/tstyle.css" type="text/css" />
         <link rel="stylesheet" type="image/x-icon" href="Assets/scss/terminal.scss" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/f1903f98ac.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="Assets/js/cookies.js"></script>
-        <script src="https://unpkg.com/typeit@8.4.0/dist/index.umd.js" type="module"></script>
+        <script src="https://unpkg.com/typeit@8.4.0/dist/index.umd.js" type="text/javascript"></script>
     </head>
     <body>
         <main class="term-main">
-<!--            <div id="scanline"></div>-->
+            <!--            <div id="scanline"></div>-->
             <!--<div id="screen1">-->
             <header>
                 <!--<i class="fas fa-terminal"></i>-->
@@ -36,158 +36,170 @@
                 <div id="crt" class="theme-green off" >
                     <div class="scanline"></div>
                     <div class="terminal">
-<!--                    <div id="input"><input name="t-in" id="t-in" ></div> <span></span>-->
+                        <!--                    <div id="input"><input name="t-in" id="t-in" ></div> <span></span>-->
+                    </div>
                 </div>
-                </div>
-                
+
             </div>
-            
+
             <section id="infopane">
                 <h1>Terminal HUB</h1>
 
                 <!--<button type="button" onclick="writeCookie()">Add Cookie</button>-->
                 <details>
                     <summary>Welcome</summary>
-                    <p>
-                        Welcome to the Terminal Hub. This is an online terminal
-                        <br>
-                        * Note: terminal website is still a work in progress. Commands may not work yet. <br />
-                        <br>
-                        * DO NOT ENTER ANY PERSONAL INFORMATION PLEASE.
-                        <br /> Terminal Connection: Select a Terminal before Clicking &QUOT;CONNECT&QUOT;
-                    </p>
+                    <div>
+                        <p>
+                            Welcome to the Terminal Hub. This is an online terminal
+                            <br>
+                            * Note: terminal website is still a work in progress. Commands may not work yet. <br />
+                            <br>
+                            * DO NOT ENTER ANY PERSONAL INFORMATION PLEASE.
+                            <br /> Under Terminal Connection: Select a Terminal before Clicking &QUOT;CONNECT&QUOT;
+                        </p>
+                    </div>
                 </details>
-                <p>
 
-                </p>
                 <details>
                     <summary>Terminal Connection</summary>
-                    <table id="connector">
-                        <tr>
-                            <td><label for="selterm">Select Terminal:</label></td>
-                            <td>
-                                <select name="selterm" id="selterm">
-                                    <option value="111">#111</option>
-                                    <option value="222">#222</option>
-                                    <option value="333">#333</option>
-                                    <option value="444">#444</option>
-                                    <option value="555">#555</option>
-                                    <option value="???">#???</option>
-                                </select>
-                            </td>
-                            <td><button type="button" id="power" title="Connect to Selected Terminal">Connect</button></td>
-                        </tr>
-                        <tr>
-                            <!--<td><span id="terminal-sel"></span></td>-->
-                            <td><label for="theme">Select Theme (optional):</label></td>
-                            <td><select name="theme" id="theme">
-                                    <option value="theme-green">Theme</option>
-                                    <option value="theme-blue">Theme</option>
-                                    <option value="theme-">Theme</option>
-                                </select></td>
-                        </tr>
-                    </table>
-                    <table id="info"><tr>
-                            <td>Terminal:</td>
-                            <td><data id="term" value="111">111</data></td>
-                            <td></td>
-                        </tr>
-                        <tr><td>Connection State: </td>
-                            <td><data id="connect" value="-1">Not Connected</data></td></tr>
-                    </table>
+                    <div>
+                        <table id="connector">
+                            <tr>
+                                <td><label for="selterm">Select Terminal:</label></td>
+                                <td>
+                                    <select name="selterm" id="selterm">
+                                        <option value="111">#111</option>
+                                        <option value="222">#222</option>
+                                        <option value="333">#333</option>
+                                        <option value="444">#444</option>
+                                        <option value="555">#555</option>
+                                        <option value="???">#???</option>
+                                    </select>
+                                </td>
+                                <td><button type="button" id="power" title="Connect to Selected Terminal">Connect</button></td>
+                            </tr>
+                            <tr>
+                                <td>Messages: </td>
+                                <td><data id="msg"></data></td>
+                            </tr>
+                            <tr>
+                                <!--<td><span id="terminal-sel"></span></td>-->
+                                <td><label for="theme">Select Theme (optional):</label></td>
+                                <td><select name="theme" id="theme">
+                                        <option value="theme-green">Theme</option>
+                                        <option value="theme-blue">Theme</option>
+                                        <option value="theme-">Theme</option>
+                                    </select></td>
+                            </tr>
+                        </table>
+                        <table id="info"><tr>
+                                <td>Terminal:</td>
+                                <td><data id="term" value="111">111</data></td>
+                                <td></td>
+                            </tr>
+                            <tr><td>Connection State: </td>
+                                <td><data id="connect" value="-1">Not Connected</data></td></tr>
+                        </table>
+                    </div>
+
                 </details>
 
 
                 <details>
                     <summary>Terminals - Information</summary>
-                    Each Terminal Contains a set of commands that you can try out.
+                    <div>
+                        Each Terminal Contains a set of commands that you can try out.
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>Terminal #111</dt>
+                                    <dd>
+                                        - Location: online <br />
+                                        - Connection:
+                                        - Commands:
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Terminal #222</dt>
+                                    <dd>
+                                        - Location: online <br />
+                                        - Connection:
+                                        - Commands:
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Terminal #333</dt>
+                                    <dd>
+                                        - Location: online <br />
+                                        - Connection:
+                                        - Commands:
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Terminal #444</dt>
+                                    <dd>
+                                        - Location: online <br />
+                                        - Connection:
+                                        - Commands:
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Terminal #555</dt>
+                                    <dd>
+                                        - Location: online <br />
+                                        - Connection:
+                                        - Commands:
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Terminal #???</dt>
+                                    <dd>
+                                        - Location: online <br />
+                                        - Connection: ?????
+                                        - Commands: ?????,?????
 
-                    <ul>
-                        <li>
-                            <dl>
-                                <dt>Terminal #111</dt>
-                                <dd>
-                                    - Location: online <br />
-                                    - Connection:
-                                    - Commands:
-                                </dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>Terminal #222</dt>
-                                <dd>
-                                    - Location: online <br />
-                                    - Connection:
-                                    - Commands:
-                                </dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>Terminal #333</dt>
-                                <dd>
-                                    - Location: online <br />
-                                    - Connection:
-                                    - Commands:
-                                </dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>Terminal #444</dt>
-                                <dd>
-                                    - Location: online <br />
-                                    - Connection:
-                                    - Commands:
-                                </dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>Terminal #555</dt>
-                                <dd>
-                                    - Location: online <br />
-                                    - Connection:
-                                    - Commands:
-                                </dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>Terminal #???</dt>
-                                <dd>
-                                    - Location: online <br />
-                                    - Connection: ?????
-                                    - Commands: ?????,?????
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt></dt>
+                                    <dd></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
 
-                                </dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt></dt>
-                                <dd></dd>
-                            </dl>
-                        </li>
-                    </ul>
                 </details>
                 <details>
                     <summary>Other Information</summary>
-                    I got inspiration from serveral different sources
-                    <ul>
-                        <li><a href="https://github.com/terminal-unknown/">Github: Terminal-Unknown (owner of this site)</a></li>
-                        <li>Sources of Inspiration</li>
-                        <li><a href="https://codesandbox.io/embed/crt-terminal-in-css-js-tlijm?fontsize=14&hidenavigation=1&theme=dark&view=preview">Terminal Sn</a></li>
-                        <li><a href="#"></a></li>
-                        <li>Credit to Other Sources<ul>
-                                <li><a href="https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh">Retro CRT Terminal Screen + JS - Dev Community</a></li>
-                                <li></li>
-                            </ul></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
+                    <div>
+                        I got inspiration from serveral different sources
+                        <ul>
+                            <li>Terminal-Unknown (Github)<a href="https://github.com/terminal-unknown/">Github: Terminal-Unknown (owner of this site)</a></li>
+                            <li>Sources of Inspiration</li>
+                            <li><a href="https://codesandbox.io/embed/crt-terminal-in-css-js-tlijm?fontsize=14&hidenavigation=1&theme=dark&view=preview">Terminal Sn</a></li>
+                            <li><a href="#"></a></li>
+                            <li>Credit to Other Sources<ul>
+                                    <li><a href="https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh">Retro CRT Terminal Screen + JS - Dev Community</a></li>
+                                    <li></li>
+                                </ul></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+
                 </details>
             </section>
 

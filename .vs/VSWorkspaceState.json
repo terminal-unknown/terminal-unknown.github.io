@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.github",
+    "\\.github\\workflows",
+    "\\root",
+    "\\root\\Assets",
+    "\\root\\Assets\\css",
+    "\\root\\Assets\\js",
+    "\\root\\Assets\\scss",
+    "\\root\\Assets\\util",
+    "\\util"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\root\\Assets\\js\\terminal.js",
   "PreviewInSolutionExplorer": false
 }
